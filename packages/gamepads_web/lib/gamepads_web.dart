@@ -7,6 +7,7 @@ import 'dart:html' as html show window;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:gamepads_platform_interface/api/gamepad_controller.dart';
 import 'package:gamepads_platform_interface/api/gamepad_event.dart';
 import 'package:gamepads_platform_interface/method_channel_interface.dart';
@@ -62,6 +63,11 @@ class GamepadsWeb extends GamepadsPlatformInterface {
   @override
   Future<List<GamepadController>> listGamepads() async {
     return getGamepads();
+  }
+
+  static void registerWith(Registrar registrar) {
+    //no need for this.
+    //GamepadsPlatformInterface.instance = GamepadsWeb();
   }
 
   Future<void> platformCallHandler(MethodCall call) async {

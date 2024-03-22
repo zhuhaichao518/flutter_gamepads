@@ -27,7 +27,7 @@ flutter:
     implements: gamepads
     platforms:
       web:
-        pluginClass: GamepadsWebPlugin
+        pluginClass: GamepadsWeb
         fileName: gamepads_web.dart
 
 #flutter:
