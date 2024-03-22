@@ -10,7 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  gamepads: ^0.1.1
+  gamepads:
+    path: ../
 
 dev_dependencies:
   flame_lint: ^0.2.0
