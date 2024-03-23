@@ -17,6 +17,10 @@ abstract class GamepadsPlatformInterface extends PlatformInterface {
   static GamepadsPlatformInterface instance =
       MethodChannelGamepadsPlatformInterface();
 
+  List<String> getGamepadStatesListString(){
+    return [];
+  }
+
   Future<List<GamepadController>> listGamepads();
 
   Stream<GamepadEvent> get gamepadEventsStream;
